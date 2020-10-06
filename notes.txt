@@ -18,7 +18,7 @@ Typen von Datenbanken
         - Dateien können auf veschiedenen Rechnern im selben oder unterschiedlichen Netzwerken gespeichert werden
         - hat Vorteil das keine Engpässe durch Zugriff auf einen Server entstehen, höhere Ausfallsicherheit
     Objektorientierte Datenbanken
-        - 
+        - Darstellung
     Dokument-/JSON-Datenbanken
     NoSQL-Datenbanken
     Selbstverwaltende Datenbanken

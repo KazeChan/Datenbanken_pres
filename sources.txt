@@ -1,0 +1,3 @@
+https://www.oracle.com/de/database/what-is-database.html
+https://de.wikipedia.org/wiki/Datenbank#Verschiedene_Formen_von_Datenbanksystemen
+https://www.datenbanken-verstehen.de/lexikon/verteilte-datenbanksysteme/
