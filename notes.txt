@@ -1,0 +1,33 @@
+Definition Datenbank
+- organisierte Sammlung von strukturierten Informationen oder Daten
+- wird typischerweise elektronisch in einem Computersstem gespeichert
+- Steuerung durch Datenbankmanagementsystem
+- Aufgabe: Speicherung von Daten effizient, wiederspruchsfrei und persistent
+- Unterschied zu Tabellenkalkulationen wie Excel oder ähnliches:
+    - Speicherung und Bearbeitung von Daten
+    - Personen, die auf Daten zugreifen können
+    - Datenmenge, die gespeichert werdeen kann
+
+Typen von Datenbanken
+    Hierarchische Datenbanken
+        - Datenobjekte stehen in Eltern-Kind-Beziehung zueinander
+        - Beispiel: Dateisystem auf dem PC
+    Verteilte Datenbanken
+        - bestehend aus mindestens 2 Dateien
+        - Dateien sind an unterschiedlichen Standorten
+        - Dateien können auf veschiedenen Rechnern im selben oder unterschiedlichen Netzwerken gespeichert werden
+        - hat Vorteil das keine Engpässe durch Zugriff auf einen Server entstehen, höhere Ausfallsicherheit
+    Objektorientierte Datenbanken
+        - 
+    Dokument-/JSON-Datenbanken
+    NoSQL-Datenbanken
+    Selbstverwaltende Datenbanken
+    Relationale Datenbanken
+        Darstellung im ERM Modell
+        Normalisierung
+            1. NF
+            2. NF
+            3. NF
+        
+Datenbankmanagementsystem
+
