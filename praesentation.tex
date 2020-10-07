@@ -24,6 +24,7 @@
 \usepackage{listings}
 \usepackage{makecell}
 \usepackage{tikz}
+\usepackage[yyyymmdd,hhmmss]{datetime}
 % we want ER + above/below + left/right
 \usetikzlibrary{er,positioning}
 %\usepackage{csvsimple}
@@ -185,11 +186,11 @@
     \begin{itemize}
         \item Elemente sind als Satz von Tabellen mit Spalten und Zeilen organisiert
         \item Tabellen stehen in Relationen zueinander
-        \item Datensätze sind Identifizierbar über Primär- und Fremdschlüssel
+        \item Datensätze sind identifizierbar über Primär- und Fremdschlüssel
     \end{itemize}
 \end{frame}
 
-\subsubsection{Darstellung im ERM Modell}
+\subsubsection{Darstellung im ER Modell}
 \begin{frame}[t]
     \frametitle{\subsecname}
     \framesubtitle{\subsubsecname}
@@ -296,11 +297,11 @@
 
 \begin{frame}[t]
     \frametitle{Quellen}
-    \scriptsize https://www.oracle.com/de/database/what-is-database.html, \newline letzter Aufruf \today\ 10:00\newline \newline
-    \scriptsize https://de.wikipedia.org/wiki/Datenbank\#Verschiedene\_Formen\_von\_Datenbanksystemen, \newline letzter Aufruf \today\  10:00\newline \newline
-    \scriptsize https://www.datenbanken-verstehen.de/lexikon/verteilte-datenbanksysteme/, \newline letzter Aufruf \today\  10:00\newline \newline
-    \scriptsize https://www.bigdata-insider.de/was-ist-ein-datenbankmanagementsystem-a-615034/, \newline letzter Aufruf \today\  10:00\newline \newline
-    \scriptsize https://de.wikipedia.org/wiki/Normalisierung\_(Datenbank), \newline letzter Aufruf \today\  10:00\newline \newline
+    \scriptsize https://www.oracle.com/de/database/what-is-database.html, \newline letzter Aufruf \today\ \currenttime \newline \newline
+    \scriptsize https://de.wikipedia.org/wiki/Datenbank\#Verschiedene\_Formen\_von\_Datenbanksystemen, \newline letzter Aufruf \today\  \currenttime \newline \newline
+    \scriptsize https://www.datenbanken-verstehen.de/lexikon/verteilte-datenbanksysteme/, \newline letzter Aufruf \today\  \currenttime \newline \newline
+    \scriptsize https://www.bigdata-insider.de/was-ist-ein-datenbankmanagementsystem-a-615034/, \newline letzter Aufruf \today\  \currenttime \newline \newline
+    \scriptsize https://de.wikipedia.org/wiki/Normalisierung\_(Datenbank), \newline letzter Aufruf \today\ \currenttime \newline \newline
 \end{frame}
 
 \end{document}

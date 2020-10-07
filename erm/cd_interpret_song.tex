@@ -1,11 +1,11 @@
 \resizebox{\textwidth}{!}{
     \begin{tikzpicture}[auto,node distance=1.5cm]
-        \node[entity] (node1) {\scriptsize CD}
+        \node[entity] (node1) {\scriptsize Album}
         [grow=up,sibling distance=3cm]
             child {node[attribute] {\scriptsize Albumtitel}}
             child {node[attribute] {\scriptsize Erscheinungsjahr}}
         child[grow=left,level distance=3cm] 
-            {node[attribute] {\scriptsize \underline{CD\_ID}}};
+            {node[attribute] {\scriptsize \underline{Album\_ID}}};
 
         % Now place a relation (ID=rel1)
         \node[relationship] (rel1) 

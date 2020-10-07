@@ -37,7 +37,7 @@ Typen von Datenbanken
 	- Elemente sind als Satz von Tabellen mit Spalten und Zeilen organisiert
 	- Tabellen stehen in Relationen zueinander
 	- Datensätze sind Identifizierbar über Primär- und Fremdschlüssel
-	Darstellung im ERM Modell
+	Darstellung im ER Modell
 	    - Begriffe: Entität, Kadinalität, Attribut, Beziehung
 	    - HIER BILD EINES ERM EINFÜGEN ----> https://texample.net/tikz/examples/er-diagram/
 	Normalisierung
