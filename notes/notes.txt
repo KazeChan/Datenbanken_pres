@@ -1,0 +1,106 @@
+Definition Datenbank
+    - organisierte Sammlung von strukturierten Informationen oder Daten
+    - wird typischerweise elektronisch in einem Computersstem gespeichert
+    - Steuerung durch Datenbankmanagementsystem
+    - Aufgabe: Speicherung von Daten effizient, wiederspruchsfrei und persistent
+    - Unterschied zu Tabellenkalkulationen wie Excel oder ähnliches:
+        - Speicherung und Bearbeitung von Daten
+        - Personen, die auf Daten zugreifen können
+        - Datenmenge, die gespeichert werdeen kann
+
+Typen von Datenbanken
+    Hierarchische Datenbanken
+        - Datenobjekte stehen in Eltern-Kind-Beziehung zueinander
+        - Beispiel: Dateisystem auf dem PC
+    Verteilte Datenbanken
+        - bestehend aus mindestens 2 Dateien
+        - Dateien sind an unterschiedlichen Standorten
+        - Dateien können auf veschiedenen Rechnern im selben oder unterschiedlichen Netzwerken gespeichert werden
+        - hat Vorteil das keine Engpässe durch Zugriff auf einen Server entstehen, höhere Ausfallsicherheit
+    Objektorientierte Datenbanken
+        - Darstellung durch Objekte
+        - Beispiel: C# Projekt in der Schule 
+    NoSQL-Datenbanken
+	- Speicherung unstrukturierter und semistrukturierter Daten
+    	- eindeutige Definition, wie Daten in Datenbank eingegeben werden
+    	- im austeigendem Trend, weil Webanwendungen immer häufiger ud komplexer geworden sind
+    	- Redis Key-Value-Store
+    Dokument-/JSON-Datenbanken
+	- Speichern, Abrufen und Verwalten dokumentenorientierter Informationen
+	- Speicherung von Daten im JSON Format
+	- Mongo DB
+    Selbstverwaltende Datenbanken
+    	- cloudbasiert
+    	- verwenden Machine Learning um Datenbankoptimierung, Sicherheit, Backups, Updates und andere Routineverwaltungsaufgaben zu automatisieren
+    	- Übernehmen Aufgaben, die traditionell von Datenbankadministratoren übernommen werden
+    Relationale Datenbanken
+	- Elemente sind als Satz von Tabellen mit Spalten und Zeilen organisiert
+	- Tabellen stehen in Relationen zueinander
+	- Datensätze sind Identifizierbar über Primär- und Fremdschlüssel
+	Darstellung im ERM Modell
+	    - Begriffe: Entität, Kadinalität, Attribut, Beziehung
+	    - HIER BILD EINES ERM EINFÜGEN ----> https://texample.net/tikz/examples/er-diagram/
+	Normalisierung
+	    - Regeln für die Beseitugung von Redundanzen
+	    - Ziel ist Konsistenzerhöhung, zur Verhinderung von Anomalien
+	    1. NF
+		- `"Jedes Attribut der Relation muss einen atomaren Wertebereich haben, und die Relation muss frei von Wiederholungsgruppen sein."'
+		- TABELLE EINFÜGEN VERLETZTE NF
+		
+			CD_ID	Album				Gründungsjahr	Erscheinungsjahr	Titelliste
+			4711	Anastacia – Not That Kind	1999		2000			{1. Not That Kind, 2. I’m Outta Love, 3. Cowboys & Kisses}
+			4712	Pink Floyd – Wish You Were Here	1965		1975			{1. Shine On You Crazy Diamond}
+			4713	Anastacia – Freak of Nature	1999		2001			{1. Paid my Dues}
+
+		- TABELLE EINFÜGEN RICHTIGE NF	
+		    
+			CD_ID	Albumtitel		Interpret	Gründungsjahr	Erscheinungsjahr	Track	Titel
+			4711	Not That Kind		Anastacia	1999		2000			1	Not That Kind
+			4711	Not That Kind		Anastacia	1999		2000			2	I’m Outta Love
+			4711	Not That Kind		Anastacia	1999		2000			3	Cowboys & Kisses
+			4712	Wish You Were Here 	Pink Floyd	1965		1975			1	Shine On You Crazy Diamond
+			4713	Freak of Nature		Anastacia	1999		2001			1	Paid my Dues
+	    2. NF
+	    	- `"Eine Relation ist genau dann in der zweiten Normalform, wenn die erste Normalform vorliegt und kein Nichtprimärattribut (Attribut, das nicht Teil eines Schlüsselkandidaten ist) funktional von einer echten Teilmenge eines Schlüsselkandidaten abhängt."'
+	    	- TABELLE EINFÜGEN 1. NF
+	    	- TABELLEN EINFÜGEN 2.NF
+	    	
+			CD_ID	Albumtitel		Interpret	Gründungsjahr	Erscheinungsjahr
+			4711	Not That Kind		Anastacia	1999		2000
+			4712	Wish You Were Here 	Pink Floyd	1965		1975
+			4713	Freak of Nature		Anastacia	1999		2001
+
+			CD_ID	Track	Titel
+			4711	1	Not That Kind
+			4711	2	I’m Outta Love
+			4711	3	Cowboys & Kisses
+			4712	1	Shine On You Crazy Diamond
+			4713	1	Paid my Dues
+	    
+	    3. NF
+	    	- `"Die dritte Normalform ist genau dann erreicht, wenn sich das Relationenschema in der 2NF befindet, und kein Nichtschlüsselattribut von einem Schlüsselkandidaten transitiv abhängt."'
+        	- TABELLE 2. NF einfügen
+        	- TABELLE 3. NF EINFÜGEN
+        	
+			CD_ID	Albumtitel		Interpret_ID	Erscheinungsjahr
+			4711	Not That Kind		311		2000
+			4712	Wish You Were Here 	312		1975
+			4713	Freak of Nature		311		2001
+			
+			Interpret_ID	Interpret	Gründungsjahr
+			311		Anastacia	1999
+			312		Pink Floyd	1965
+			
+			CD_ID	Track	Titel
+			4711	1	Not That Kind
+			4711	2	I’m Outta Love
+			4711	3	Cowboys & Kisses
+			4712	1	Shine On You Crazy Diamond
+			4713	1	Paid my Dues
+
+Datenbankmanagementsystem
+    - Organisation und Strukturierung der Daten
+    - Kontrolle von lesenden und schreibenden Zugriffen auf die Datenbasis
+    - im Unternehmen SQLYog für Relationale Datenbanken verwendet
+
+

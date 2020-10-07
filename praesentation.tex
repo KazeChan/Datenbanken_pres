@@ -1,0 +1,245 @@
+
+\documentclass[aspectratio=169,14pt,xcolor=dvipsnames]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{blindtext}
+\usepackage{pdfpages}
+\usepackage[font=footnotesize]{caption}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage[]{hyperref}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{eurosym}
+\usepackage{pgfpages}
+\usepackage{xfrac}
+\usepackage{here}
+\usepackage{listings}
+%\usepackage{csvsimple}
+\usetheme[width=0.17\textwidth]{Hannover}
+\usecolortheme{whale}
+\usefonttheme{professionalfonts}
+
+
+\definecolor{UPblau}{RGB}{0,45,80}
+\definecolor{UPhellblau}{RGB}{0,170,255}
+\definecolor{UPhelllila}{RGB}{255,170,255}
+\definecolor{UPhellblau2}{RGB}{0,200,185}
+\definecolor{UPgrau}{RGB}{140,120,125}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\setbeamertemplate{caption}[numbered]
+
+%definitionen für Code snippet, einbinden mit  \lstinputlisting{unitetest.js}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    numberstyle=\tiny\color{codegray},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\title{Datenbanken}
+\author[]{Laura Pech}
+\institute{Unitedprint.com SE\\Auszubildende Fachinformatikerin für Anwendungsentwicklung}
+\date{\today}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{button}%
+    \usebeamercolor{black}%
+    \hspace{3em}%
+    \huge{\insertframenumber/\inserttotalframenumber}
+}
+
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace*{-8pt}\today\hfill\insertauthor\hfill\insertframenumber/\inserttotalframenumber}}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{palette primary}{bg=UPblau,fg=white}
+\setbeamercolor{palette secondary}{bg=UPblau,fg=white}
+\setbeamercolor{palette tertiary}{bg=UPblau,fg=white}
+\setbeamercolor{palette quaternary}{bg=UPblau,fg=white}
+\setbeamercolor{structure}{fg=UPblau} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=UPblau} % TOC sections
+
+\begin{document}
+\maketitle
+
+\begin{frame}[t]
+    \frametitle{Gliederung}
+    \hypersetup{linkcolor=black}
+    \tableofcontents%[subsubsectionstyle=hide]
+\end{frame}
+
+\section{Definition Datenbank}
+
+\begin{frame}[t]
+    \frametitle{\secname}
+    \begin{itemize}
+        \item organisierte Sammlung von strukturierten Informationen oder Daten
+        \item wird typischerweise elektronisch in einem Computersstem gespeichert
+        \item Steuerung durch Datenbankmanagementsystem
+        \item Aufgabe: Speicherung von Daten effizient, wiederspruchsfrei und persistent
+        \item Unterschied zu Tabellenkalkulationen wie Excel oder ähnliches:
+        \begin{itemize}
+            \item Speicherung und Bearbeitung von Daten
+            \item Personen, die auf Daten zugreifen können
+            \item Datenmenge, die gespeichert werdeen kann
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\section{Typen von Datenbanken}
+
+\subsection{Hierarchische Datenbanken}
+\begin{frame}[t]
+    \frametitle{\secname}
+    \framesubtitle{\subsecname}
+    \begin{itemize}
+        \item Datenobjekte stehen in Eltern-Kind-Beziehung zueinander
+        \item Beispiel: Dateisystem auf dem PC
+    \end{itemize}
+\end{frame}
+
+\subsection{Verteilte Datenbanken}
+\begin{frame}[t]
+    \frametitle{\secname}
+    \framesubtitle{\subsecname}
+    \begin{itemize}
+        \item bestehend aus mindestens 2 Dateien
+        \item Dateien sind an unterschiedlichen Standorten
+        \item Dateien können auf veschiedenen Rechnern im selben oder unterschiedlichen Netzwerken gespeichert werden
+        \item hat Vorteil das keine Engpässe durch Zugriff auf einen Server entstehen, höhere Ausfallsicherheit
+    \end{itemize}
+\end{frame}
+
+\subsection{Objektorientierte Datenbanken}
+\begin{frame}[t]
+    \frametitle{\secname}
+    \framesubtitle{\subsecname}
+    \begin{itemize}
+        \item Darstellung durch Objekte
+        \item Beispiel: C\# Projekt in der Schule 
+    \end{itemize}
+\end{frame}
+
+\subsection{NoSQL Datenbanken}
+\begin{frame}[t]
+    \frametitle{\secname}
+    \framesubtitle{\subsecname}
+    \begin{itemize}
+        \item Speicherung unstrukturierter und semistrukturierter Daten
+        \item eindeutige Definition, wie Daten in Datenbank eingegeben werden
+        \item im austeigendem Trend, weil Webanwendungen immer häufiger ud komplexer geworden sind
+        \item Redis Key-Value-Store
+    \end{itemize}
+\end{frame}
+
+\subsection{Document-/ JSON Datenbanken}
+\begin{frame}[t]
+    \frametitle{\secname}
+    \framesubtitle{\subsecname}
+    \begin{itemize}
+        \item Speichern, Abrufen und Verwalten dokumentenorientierter Informationen
+        \item Speicherung von Daten im JSON Format
+        \item Mongo DB
+    \end{itemize}
+\end{frame}
+
+\subsection{Selbstverwaltende Datenbanken}
+\begin{frame}[t]
+    \frametitle{\secname}
+    \framesubtitle{\subsecname}
+    \begin{itemize}
+        \item cloudbasiert
+        \item verwenden Machine Learning um Datenbankoptimierung, Sicherheit, Backups, Updates und andere Routineverwaltungsaufgaben zu automatisieren
+        \item Übernehmen Aufgaben, die traditionell von Datenbankadministratoren übernommen werden
+    \end{itemize}
+\end{frame}
+
+\subsection{Relationale Datenbanken}
+\begin{frame}[t]
+    \frametitle{\secname}
+    \framesubtitle{\subsecname}
+    \begin{itemize}
+        \item Elemente sind als Satz von Tabellen mit Spalten und Zeilen organisiert
+        \item Tabellen stehen in Relationen zueinander
+        \item Datensätze sind Identifizierbar über Primär- und Fremdschlüssel
+    \end{itemize}
+\end{frame}
+
+\subsubsection{Darstellung im ERM Modell}
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    \begin{itemize}
+        \item Begriffe: Entität, Kadinalität, Attribut, Beziehung
+        %TODO ERM MODELL
+    \end{itemize}
+\end{frame}
+
+\subsubsection{Normalisierung}
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    \begin{itemize}
+        \item Regeln für die Beseitugung von Redundanzen
+        \item Ziel ist Konsistenzerhöhung, zur Verhinderung von Anomalien
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    1. Normalform
+    \begin{itemize}
+        \item `"Jedes Attribut der Relation muss einen atomaren Wertebereich haben, und die Relation muss frei von Wiederholungsgruppen sein."'
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    2. Normalform
+    \begin{itemize}
+        \item `"Eine Relation ist genau dann in der zweiten Normalform, wenn die erste Normalform vorliegt und kein Nichtprimärattribut (Attribut, das nicht Teil eines Schlüsselkandidaten ist) funktional von einer echten Teilmenge eines Schlüsselkandidaten abhängt."'
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    3. Normalform
+    \begin{itemize}
+        \item `"Die dritte Normalform ist genau dann erreicht, wenn sich das Relationenschema in der 2NF befindet, und kein Nichtschlüsselattribut von einem Schlüsselkandidaten transitiv abhängt."'
+    \end{itemize}
+\end{frame}
+
+\section{DBMS}
+\begin{frame}[t]
+    \frametitle{Datenbankmanagementsysteme}
+    \begin{itemize}
+        \item Organisation und Strukturierung der Daten
+        \item Kontrolle von lesenden und schreibenden Zugriffen auf die Datenbasis
+        \item im Unternehmen SQLYog für Relationale Datenbanken verwendet
+    \end{itemize}
+\end{frame}
+
+\end{document}
