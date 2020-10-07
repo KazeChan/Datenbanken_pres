@@ -22,6 +22,7 @@
 \usepackage{xfrac}
 \usepackage{here}
 \usepackage{listings}
+\usepackage{makecell}
 %\usepackage{csvsimple}
 \usetheme[width=0.17\textwidth]{Hannover}
 \usecolortheme{whale}
@@ -210,8 +211,27 @@
     \framesubtitle{\subsubsecname}
     1. Normalform
     \begin{itemize}
-        \item `"Jedes Attribut der Relation muss einen atomaren Wertebereich haben, und die Relation muss frei von Wiederholungsgruppen sein."'
+        \item "`Jedes Attribut der Relation muss einen atomaren Wertebereich haben, und die Relation muss frei von Wiederholungsgruppen sein."'
     \end{itemize}
+    \pause
+    \input{tables/ungeordnete_tabelle.tex}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    1. Normalform
+    \begin{itemize}
+        \item "`Jedes Attribut der Relation muss einen atomaren Wertebereich haben, und die Relation muss frei von Wiederholungsgruppen sein."'
+    \end{itemize}
+    \input{tables/ungeordnete_tabelle_highlighted.tex}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    1. Normalform
+    \input{tables/erste_normalform.tex}
 \end{frame}
 
 \begin{frame}[t]
@@ -219,8 +239,17 @@
     \framesubtitle{\subsubsecname}
     2. Normalform
     \begin{itemize}
-        \item `"Eine Relation ist genau dann in der zweiten Normalform, wenn die erste Normalform vorliegt und kein Nichtprimärattribut (Attribut, das nicht Teil eines Schlüsselkandidaten ist) funktional von einer echten Teilmenge eines Schlüsselkandidaten abhängt."'
+        \item "`Eine Relation ist genau dann in der zweiten Normalform, wenn die erste Normalform vorliegt und kein Nichtprimärattribut (Attribut, das nicht Teil eines Schlüsselkandidaten ist) funktional von einer echten Teilmenge eines Schlüsselkandidaten abhängt."'
     \end{itemize}
+    \pause 
+    \input{tables/erste_normalform_highlighted.tex}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    2. Normalform
+    \input{tables/zweite_normalform.tex}
 \end{frame}
 
 \begin{frame}[t]
@@ -228,8 +257,22 @@
     \framesubtitle{\subsubsecname}
     3. Normalform
     \begin{itemize}
-        \item `"Die dritte Normalform ist genau dann erreicht, wenn sich das Relationenschema in der 2NF befindet, und kein Nichtschlüsselattribut von einem Schlüsselkandidaten transitiv abhängt."'
+        \item "`Die dritte Normalform ist genau dann erreicht, wenn sich das Relationenschema in der 2NF befindet, und kein Nichtschlüsselattribut von einem Schlüsselkandidaten transitiv abhängt."'
     \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    3. Normalform
+    \input{tables/zweite_normalform_highlighted.tex}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    3. Normalform
+    \input{tables/dritte_normalform.tex}
 \end{frame}
 
 \section{DBMS}
