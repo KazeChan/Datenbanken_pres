@@ -23,6 +23,9 @@
 \usepackage{here}
 \usepackage{listings}
 \usepackage{makecell}
+\usepackage{tikz}
+% we want ER + above/below + left/right
+\usetikzlibrary{er,positioning}
 %\usepackage{csvsimple}
 \usetheme[width=0.17\textwidth]{Hannover}
 \usecolortheme{whale}
@@ -192,8 +195,14 @@
     \framesubtitle{\subsubsecname}
     \begin{itemize}
         \item Begriffe: Entität, Kadinalität, Attribut, Beziehung
-        %TODO ERM MODELL
     \end{itemize}
+    \input{erm/erm.tex}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{\subsecname}
+    \framesubtitle{\subsubsecname}
+    \input{erm/cd_interpret_song.tex}
 \end{frame}
 
 \subsubsection{Normalisierung}

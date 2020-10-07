@@ -1,5 +1,0 @@
-https://www.oracle.com/de/database/what-is-database.html
-https://de.wikipedia.org/wiki/Datenbank#Verschiedene_Formen_von_Datenbanksystemen
-https://www.datenbanken-verstehen.de/lexikon/verteilte-datenbanksysteme/
-https://www.bigdata-insider.de/was-ist-ein-datenbankmanagementsystem-a-615034/
-https://de.wikipedia.org/wiki/Normalisierung_(Datenbank)
