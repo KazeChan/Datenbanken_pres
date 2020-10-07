@@ -60,10 +60,12 @@
 }
 \lstset{style=mystyle}
 
+\newcommand{\datum}{09.10.2020} %Datum des Vortrags
+
 \title{Datenbanken}
 \author[]{Laura Pech}
 \institute{Unitedprint.com SE\\Auszubildende Fachinformatikerin für Anwendungsentwicklung}
-\date{\today}
+\date{\datum}
 
 \addtobeamertemplate{navigation symbols}{}{%
     \usebeamerfont{button}%
@@ -73,7 +75,7 @@
 }
 
 \setbeamertemplate{footline}[text line]{%
-  \parbox{\linewidth}{\vspace*{-8pt}\today\hfill\insertauthor\hfill\insertframenumber/\inserttotalframenumber}}
+  \parbox{\linewidth}{\vspace*{-8pt}\datum\hfill\insertauthor\hfill\insertframenumber/\inserttotalframenumber}}
 \setbeamertemplate{navigation symbols}{}
 
 \setbeamercolor{palette primary}{bg=UPblau,fg=white}
@@ -291,6 +293,15 @@
         \item Kontrolle von lesenden und schreibenden Zugriffen auf die Datenbasis
         \item im Unternehmen SQLYog für Relationale Datenbanken verwendet
     \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Quellen}
+    \scriptsize https://www.oracle.com/de/database/what-is-database.html, \newline letzter Aufruf \today\ 10:00\newline \newline
+    \scriptsize https://de.wikipedia.org/wiki/Datenbank\#Verschiedene\_Formen\_von\_Datenbanksystemen, \newline letzter Aufruf \today\  10:00\newline \newline
+    \scriptsize https://www.datenbanken-verstehen.de/lexikon/verteilte-datenbanksysteme/, \newline letzter Aufruf \today\  10:00\newline \newline
+    \scriptsize https://www.bigdata-insider.de/was-ist-ein-datenbankmanagementsystem-a-615034/, \newline letzter Aufruf \today\  10:00\newline \newline
+    \scriptsize https://de.wikipedia.org/wiki/Normalisierung\_(Datenbank), \newline letzter Aufruf \today\  10:00\newline \newline
 \end{frame}
 
 \end{document}
