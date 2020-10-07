@@ -5,7 +5,7 @@
             child {node[attribute] {\scriptsize Albumtitel}}
             child {node[attribute] {\scriptsize Erscheinungsjahr}}
         child[grow=left,level distance=3cm] 
-            {node[attribute] {\scriptsize CD\_ID}};
+            {node[attribute] {\scriptsize \underline{CD\_ID}}};
 
         % Now place a relation (ID=rel1)
         \node[relationship] (rel1) 
@@ -14,7 +14,7 @@
         % Now the 2nd entity (ID=rel2)
         \node[entity] (node2) [right = of rel1]	{\scriptsize Künstler}
             child[grow=up,level distance=1.5cm]
-                {node[attribute] {\scriptsize Interpret\_ID}}
+                {node[attribute] {\scriptsize \underline{Interpret\_ID}}}
             child[grow=right,level distance=3cm] 
                 {node[attribute] {\scriptsize Name}}
             child[grow=down,level distance=1.5cm] 
@@ -24,14 +24,16 @@
         \path 
             (rel1)  
             edge node {\scriptsize \(n\)}       (node1)
-            edge node {\scriptsize 1}	(node2);
+            edge node {\scriptsize \(1\)}	(node2);
 
         \node[relationship] (rel2)
             [below = of node1] {\scriptsize hat};
 
-        \node[entity] (node3) [below = of rel2] {\scriptsize Lied}
+        \node[entity] (node3) [below right = of rel2] {\scriptsize Lied}
             child[grow=left,level distance=3cm]
                 {node[attribute] {\scriptsize Track}}
+            child[grow=up,level distance=1.5cm]
+                {node[attribute] {\scriptsize \underline{Lied\_ID}}}
             child[grow=right,level distance=3cm]
                 {node[attribute] {\scriptsize Titel}};
 
