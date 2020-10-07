@@ -47,27 +47,28 @@ Typen von Datenbanken
 		- `"Jedes Attribut der Relation muss einen atomaren Wertebereich haben, und die Relation muss frei von Wiederholungsgruppen sein."'
 		- TABELLE EINFÜGEN VERLETZTE NF
 		
-			CD_Lied
-			CD_ID	Album			Gründungsjahr	Erscheinungsjahr	Titelliste
-			4711	Anastacia – Not That Kind	1999	2000	{1. Not That Kind, 2. I’m Outta Love, 3. Cowboys & Kisses}
-			4712	Pink Floyd – Wish You Were Here	1965	1975	{1. Shine On You Crazy Diamond}
-			4713	Anastacia – Freak of Nature	1999	2001	{1. Paid my Dues}
+			CD_ID	Album				Gründungsjahr	Erscheinungsjahr	Titelliste
+			4711	Anastacia – Not That Kind	1999		2000			{1. Not That Kind, 2. I’m Outta Love, 3. Cowboys & Kisses}
+			4712	Pink Floyd – Wish You Were Here	1965		1975			{1. Shine On You Crazy Diamond}
+			4713	Anastacia – Freak of Nature	1999		2001			{1. Paid my Dues}
 
-		- TABELLE EINFÜGEN RICHTIGE NF	    
-			CD_ID	Albumtitel	Interpret	Gründungsjahr	Erscheinungsjahr	Track	Titel
-			4711	Not That Kind	Anastacia	1999		2000			1	Not That Kind
-			4711	Not That Kind	Anastacia	1999		2000			2	I’m Outta Love
-			4711	Not That Kind	Anastacia	1999		2000			3	Cowboys & Kisses
-			4712	Wish You Were Here Pink Floyd	1965		1975			1	Shine On You Crazy Diamond
-			4713	Freak of Nature	Anastacia	1999		2001			1	Paid my Dues
+		- TABELLE EINFÜGEN RICHTIGE NF	
+		    
+			CD_ID	Albumtitel		Interpret	Gründungsjahr	Erscheinungsjahr	Track	Titel
+			4711	Not That Kind		Anastacia	1999		2000			1	Not That Kind
+			4711	Not That Kind		Anastacia	1999		2000			2	I’m Outta Love
+			4711	Not That Kind		Anastacia	1999		2000			3	Cowboys & Kisses
+			4712	Wish You Were Here 	Pink Floyd	1965		1975			1	Shine On You Crazy Diamond
+			4713	Freak of Nature		Anastacia	1999		2001			1	Paid my Dues
 	    2. NF
 	    	- `"Eine Relation ist genau dann in der zweiten Normalform, wenn die erste Normalform vorliegt und kein Nichtprimärattribut (Attribut, das nicht Teil eines Schlüsselkandidaten ist) funktional von einer echten Teilmenge eines Schlüsselkandidaten abhängt."'
 	    	- TABELLE EINFÜGEN 1. NF
 	    	- TABELLEN EINFÜGEN 2.NF
-			CD_ID	Albumtitel	Interpret	Gründungsjahr	Erscheinungsjahr
-			4711	Not That Kind	Anastacia	1999	2000
-			4712	Wish You Were Here Pink Floyd	1965	1975
-			4713	Freak of Nature	Anastacia	1999	2001
+	    	
+			CD_ID	Albumtitel		Interpret	Gründungsjahr	Erscheinungsjahr
+			4711	Not That Kind		Anastacia	1999		2000
+			4712	Wish You Were Here 	Pink Floyd	1965		1975
+			4713	Freak of Nature		Anastacia	1999		2001
 
 			CD_ID	Track	Titel
 			4711	1	Not That Kind
@@ -77,7 +78,29 @@ Typen von Datenbanken
 			4713	1	Paid my Dues
 	    
 	    3. NF
-	    	- Die dritte Normalform ist genau dann erreicht, wenn sich das Relationenschema in der 2NF befindet, und kein Nichtschlüsselattribut (hellgraue Zellen in der Tabelle) von einem Schlüsselkandidaten transitiv abhängt.
-        
+	    	- `"Die dritte Normalform ist genau dann erreicht, wenn sich das Relationenschema in der 2NF befindet, und kein Nichtschlüsselattribut von einem Schlüsselkandidaten transitiv abhängt."'
+        	- TABELLE 2. NF einfügen
+        	- TABELLE 3. NF EINFÜGEN
+        	
+			CD_ID	Albumtitel		Interpret_ID	Erscheinungsjahr
+			4711	Not That Kind		311		2000
+			4712	Wish You Were Here 	312		1975
+			4713	Freak of Nature		311		2001
+			
+			Interpret_ID	Interpret	Gründungsjahr
+			311		Anastacia	1999
+			312		Pink Floyd	1965
+			
+			CD_ID	Track	Titel
+			4711	1	Not That Kind
+			4711	2	I’m Outta Love
+			4711	3	Cowboys & Kisses
+			4712	1	Shine On You Crazy Diamond
+			4713	1	Paid my Dues
+
 Datenbankmanagementsystem
+    - Organisation und Strukturierung der Daten
+    - Kontrolle von lesenden und schreibenden Zugriffen auf die Datenbasis
+    - im Unternehmen SQLYog für Relationale Datenbanken verwendet
+
 
